@@ -40,7 +40,7 @@ export default function CatchTheMonkey() {
       <h1 className="text-5xl text-center font-extrabold text-green-600 mt-4 drop-shadow-lg">
         Catch the Monkey
       </h1>
-      <p className="text-center mb-2">Score: {score} | Time Left: {timeLeft}s</p>
+      <p className="text-red-600 text-xl font-semibold text-center mb-4 drop-shadow">Score: {score} | Time Left: {timeLeft}s</p>
       <button 
         onClick={() => router.push('/')}
         className='absolute top-4 left-4 bg gray-700 text-white px-4 py-2 rounded hover:bg-gray-900'>
@@ -60,8 +60,8 @@ export default function CatchTheMonkey() {
         />
       ) : (
         <div className="absolute top-1/2 left-1/2 text-center transform -translate-x-1/2 -translate-y-1/2">
-          <p className="text-2xl font-bold mb-4">Game Over!</p>
-          <p className="mb-2">Final Score: {score}</p>
+          <p className="text-purple-600 text-xl font-semibold text-center mb-4 drop-shadow">Game Over!</p>
+          <p className="text-blue-600 text-xl font-semibold text-center mb-4 drop-shadow">Final Score: {score}</p>
           <button
             onClick={resetGame}
             className="bg-green-500 px-4 py-2 rounded text-white hover:bg-green-600"
