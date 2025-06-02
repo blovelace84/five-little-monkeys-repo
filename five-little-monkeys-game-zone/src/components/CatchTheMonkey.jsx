@@ -36,14 +36,15 @@ export default function CatchTheMonkey() {
   };
 
   return (
-    <div className="relative w-full h-screen bg-blue-200">
+    <div className="relative w-full h-screen bg-cover bg-center"
+         style={{ backgroundImage: "url('/images/monkey-theme.jpg')" }}>
       <h1 className="text-5xl text-center font-extrabold text-green-600 mt-4 drop-shadow-lg">
         Catch the Monkey
       </h1>
       <p className="text-red-600 text-xl font-semibold text-center mb-4 drop-shadow">Score: {score} | Time Left: {timeLeft}s</p>
       <button 
         onClick={() => router.push('/')}
-        className='absolute top-4 left-4 bg gray-700 text-white px-4 py-2 rounded hover:bg-gray-900'>
+        className='absolute top-4 left-4 bg-gray-700 text-white px-4 py-2 rounded hover:bg-green-900'>
           ⬅️ Back to Title
         </button>
       {!gameOver ? (
