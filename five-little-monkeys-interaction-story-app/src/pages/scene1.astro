@@ -2,7 +2,7 @@
 // src/pages/scene1.astro
 import SceneLayout from "../layouts/SceneLayout.astro";
 import MonkeyCard from "../components/MonkeyCard.jsx";
-import { monkeyCount } from "../stores/monkeyStore";
+import MonkeyCount from "../components/MonkeyCount.jsx";
 ---
 
 <SceneLayout title="Scene 1: Five Little Monkeys">
@@ -12,5 +12,5 @@ import { monkeyCount } from "../stores/monkeyStore";
   <MonkeyCard id={3} />
   <MonkeyCard id={4} />
   <MonkeyCard id={5} />
-  <p>Monkeys left: <monkeyCount client:load></monkeyCount></p>
+  <p>Monkeys left: <MonkeyCount client:load /></p>
 </SceneLayout>

@@ -1,2 +1,2 @@
 import { atom } from 'nanostores';
-export const monkeyCount = atom(5);
+export const MonkeyCount = atom(5);
