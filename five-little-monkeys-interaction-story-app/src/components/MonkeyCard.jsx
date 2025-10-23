@@ -1,16 +1,19 @@
 import { useState } from "react";
-import "./Monkey.css";
+// import { monkeyCount } from '../stores/monkeyStore';
 
-export default function Monkey({ id, onFall }) {
+export default function MonkeyCard({ id }) {
   const [fallen, setFallen] = useState(false);
 
   const handleClick = () => {
-    setFallen(true);
-    onFall(id);
+    if (!fallen) {
+      setFallen(true);
+      monkeyCount.set(monkeyCount.get() - 1);
+    }
   };
+
   return (
     <div className={`monkey ${fallen ? "fall" : ""}`} onClick={handleClick}>
-      🐵
+      🐵 Monkey {id}
     </div>
   );
 }

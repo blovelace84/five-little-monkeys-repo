@@ -1,0 +1,9 @@
+---
+import SceneLayout from "../layouts/SceneLayout.astro";
+import { monkeyCount } from "../stores/monkeyStore";
+---
+
+<SceneLayout title="Scene 2: Doctor Called">
+  <p>The Doctor Said: "No more monkeys jumping on the bed!"</p>
+  <p>Monkeys Left: <span>{monkeyCount}</span></p>
+</SceneLayout>
