@@ -1,6 +1,5 @@
 import React from "react";
 import { useMonkeyStore } from "../stores/monkeyStore.js";
-import MonkeyCard from "./MonkeyCard.jsx";
 
 export default function MonkeyScene() {
   const { monkeyCount, decreaseMonkey, resetMonkeys } = useMonkeyStore();
