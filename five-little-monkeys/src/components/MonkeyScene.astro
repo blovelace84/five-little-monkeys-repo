@@ -1,0 +1,9 @@
+---
+import MonkeyCard from "./MonkeyCard.astro";
+
+const { count = 5 } = Astro.props;
+---
+
+<div class="grid grid-cols-2 md:grid-cols-3 gap-6">
+  {Array.from({ length: count }).map((_, i) => <MonkeyCard number={i + 1} />)}
+</div>
